@@ -1,9 +1,9 @@
 h1 {
-    font-family: 'Arbutus';    
+    font-family: 'Arbutus';
     color: darkblue;
 }
 
 #map {
-        height: 400px;
+        height: 650px;
         width: 100%;
     }
