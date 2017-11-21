@@ -1,0 +1,9 @@
+h1 {
+    font-family: 'Arbutus';    
+    color: darkblue;
+}
+
+#map {
+        height: 400px;
+        width: 100%;
+    }
