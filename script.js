@@ -5,16 +5,26 @@ function initMap() {
     var options = {
         zoom: 6,
         center: { lat: 57.7826, lng: 14.1618 } //Jönköping
-    }
+    };
 
     // New map
     var map = new google.maps.Map(document.getElementById('map'), options);
+
+    // Lables of Coordinaters
+    var lbLat = document.getElementById('lat');
+    var lbLong = document.getElementById('long');
 
     // Listen for click on maps
     google.maps.event.addListener(map, 'click',
     function(event) {
       // Add marker
       addMarker({ coords: event.latLng });
+
+      lbLat.innerHTML = "Latitude: " + event.latLng.lat();
+      lbLong.innerHTML = "Longitude: " + event.latLng.lng();
+
+      initWeather(event.latLng.lat(), event.latLng.lng());
+      //initWeather();
     });
 
     // Array of markers
@@ -42,7 +52,6 @@ function initMap() {
       addMarker(markers[i]);
     }
 
-
     /* Method adding new markers */
     function addMarker(props) {
         var marker = new google.maps.Marker({
@@ -68,4 +77,30 @@ function initMap() {
             });
         }
     }
+
+    // Display OpenWeatherMap    
+function initWeather (_lat, _lng){
+  $.ajax({
+      url: "http://api.openweathermap.org/data/2.5/weather?lat="+ _lat +"&lon="+ _lng +"&units=metric&lang=sv&appid=df7ba97e01ffc3eeadd7d1ae6cfad212",
+      type: "GET",
+      async: true,
+      dataType: "JSON"
+  }).done(function(data) {
+      console.log(data);
+
+      // Display weather data
+      document.getElementById('city').innerHTML = 'City: ' + data.name;
+      document.getElementById('country').innerHTML = 'Country code: ' + data.sys.country;
+      document.getElementById('temp').innerHTML = 'Temperature in °C' + data.main.temp;
+      document.getElementById('pressure').innerHTML = 'Pressure: ' + data.main.pressure;
+      document.getElementById('humidity').innerHTML = 'Humidity: ' + data.main.humidity;
+
+
+  }).fail(function(data) {
+      console.log(data);
+      // $("#weather-error").show();
+      // $("#error-text").html(data.message);
+  });
+  }
+
 }

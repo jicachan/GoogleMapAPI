@@ -3,17 +3,33 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Marked Cities</title>
-    <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
+    <title>API Mashup</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 
 <body>
-    <h1>Marked Cities with Google Maps API</h1>
+    <h1>Google Maps API</h1>
     <div id="map"></div>
     <script type="text/javascript" src="script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH40q_xc477Wklzxh3UZN-3adhUfmiIUA&callback=initMap">
     </script>
+
+    <h1>OpenWeatherMap API</h1>
+    <div class="vader">
+      <label id="lat">Latitude: </label><br>
+      <label id="long">Longitude: </label>
+
+      <div id="weather" class="weather">
+        <label id="city"></label>
+        <label id="country"></label>
+        <label id="temp"></label>
+        <label id="pressure"></label>
+        <label id="humidity"></label>
+      </div>
+    </div>
+
+
 </body>
 
 </html>

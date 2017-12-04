@@ -1,9 +1,13 @@
 h1 {
-    font-family: 'Arbutus';
     color: darkblue;
 }
 
 #map {
-        height: 650px;
+        height: 450px;
         width: 100%;
     }
+
+.vader {
+  color: darkblue;
+  font-size: 20px;
+}
