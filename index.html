@@ -9,27 +9,31 @@
 </head>
 
 <body>
-    <h1>Google Maps API</h1>
-    <div id="map"></div>
-    <script type="text/javascript" src="script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH40q_xc477Wklzxh3UZN-3adhUfmiIUA&callback=initMap">
-    </script>
+  <h1 id="title">Click Location to Show Weather</h1>
 
-    <h1>OpenWeatherMap API</h1>
-    <div class="vader">
-      <label id="lat">Latitude: </label><br>
-      <label id="long">Longitude: </label>
+<div class="wrapper">
+  <!-- Show map -->
+  <div class="mapbox" id="map">
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH40q_xc477Wklzxh3UZN-3adhUfmiIUA&callback=initMap">
+  </script>
 
-      <div id="weather" class="weather">
-        <label id="city"></label>
-        <label id="country"></label>
-        <label id="temp"></label>
-        <label id="pressure"></label>
-        <label id="humidity"></label>
-      </div>
-    </div>
+  <div class="latlon">
+    <label id="lat"></label>
+    <label id="long"></label>
+  </div>
+
+  <!-- Show weather -->
+  <div class="weatherbox">
+    <label id="city"></label>
+    <label id="country"></label>
+    <label id="temp"></label>
+    <label id="pressure"></label>
+    <label id="humidity"></label>
+  </div>
+</div>
 
 
 </body>
-
 </html>

@@ -1,13 +1,35 @@
-h1 {
+#title {
     color: darkblue;
+    text-align: center;
 }
 
-#map {
-        height: 450px;
-        width: 100%;
-    }
+/*#map {
+  height: 400px;
+  width: 40%;
+  margin: auto;
+}*/
 
-.vader {
-  color: darkblue;
-  font-size: 20px;
+.mapbox {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  float: left;
+  overflow: hidden;
+}
+
+.latlon {
+  text-align: center;
+}
+
+.weatherbox {
+  /*height: 300px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin: auto;*/
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  overflow: hidden;
 }
