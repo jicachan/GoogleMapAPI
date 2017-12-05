@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Bootstrap Test Page</title>
+  <title>Google Maps and Open Weather API</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,8 +14,8 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h1 id="title">Click Location to Show Weather</h1>
+      <div class="col-8 maintitle">
+        <h1 id="title">Click A Location</h1>
       </div>
     </div>
 
@@ -29,14 +29,12 @@
       <div class="col-4">
         <!-- Show weather -->
         <div class="weatherbox">
+          <h2><label id="city-country">Weather</label></h2>
+          <h3><label id="temp"></label></h3>          
           <label id="city"></label>
-          <br>
           <label id="country"></label>
-          <br>
-          <label id="temp"></label>
-          <br>
+
           <label id="pressure"></label>
-          <br>
           <label id="humidity"></label>
         </div>
       </div>

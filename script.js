@@ -106,9 +106,11 @@ function initWeather (_lat, _lng){
     console.log(data);
 
     // Display weather data
+    document.getElementById('city-country').innerHTML = 'Weather in ' + data.name + ', ' + data.sys.country;
+    document.getElementById('temp').innerHTML = data.main.temp + ' °C';
     document.getElementById('city').innerHTML = 'City: ' + data.name;
     document.getElementById('country').innerHTML = 'Country code: ' + data.sys.country;
-    document.getElementById('temp').innerHTML = 'Temperature in °C' + data.main.temp;
+
     document.getElementById('pressure').innerHTML = 'Pressure: ' + data.main.pressure;
     document.getElementById('humidity').innerHTML = 'Humidity: ' + data.main.humidity;
 
