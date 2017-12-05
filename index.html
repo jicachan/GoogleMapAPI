@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <title>API Mashup</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <title>Bootstrap Test Page</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1 id="title">Click Location to Show Weather</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 id="title">Click Location to Show Weather</h1>
+      </div>
+    </div>
 
-<div class="wrapper">
-  <!-- Show map -->
-  <div class="mapbox" id="map">
+    <div class="row">
+      <div class="col-8">
+        <!-- Show map -->
+        <div class="mapbox" id="map">
+        </div>
+
+      </div>
+      <div class="col-4">
+        <!-- Show weather -->
+        <div class="weatherbox">
+          <label id="city"></label>
+          <br>
+          <label id="country"></label>
+          <br>
+          <label id="temp"></label>
+          <br>
+          <label id="pressure"></label>
+          <br>
+          <label id="humidity"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="latlon">
+          <label id="lat"></label>
+          <label id="long"></label>
+        </div>
+      </div>
+    </div>
   </div>
-  <script type="text/javascript" src="script.js"></script>
+
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH40q_xc477Wklzxh3UZN-3adhUfmiIUA&callback=initMap">
   </script>
-
-  <div class="latlon">
-    <label id="lat"></label>
-    <label id="long"></label>
-  </div>
-
-  <!-- Show weather -->
-  <div class="weatherbox">
-    <label id="city"></label>
-    <label id="country"></label>
-    <label id="temp"></label>
-    <label id="pressure"></label>
-    <label id="humidity"></label>
-  </div>
-</div>
-
-
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

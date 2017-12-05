@@ -1,35 +1,16 @@
-#title {
+h1 {
     color: darkblue;
     text-align: center;
 }
 
-/*#map {
-  height: 400px;
-  width: 40%;
-  margin: auto;
-}*/
-
 .mapbox {
-  height: 400px;
-  width: 400px;
-  margin: auto;
-  float: left;
-  overflow: hidden;
+  height: 500px;
+  width: 100%;
+
+
 }
 
-.latlon {
-  text-align: center;
-}
 
 .weatherbox {
-  /*height: 300px;
-  width: 200px;
-  border: 1px solid black;
-  border-radius: 3px;
-  margin-top: 10px;
-  margin: auto;*/
-  height: 400px;
-  width: 400px;
-  margin: auto;
-  overflow: hidden;
+
 }
