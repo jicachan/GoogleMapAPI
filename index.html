@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Google Maps and Open Weather API</title>
+  <title>Map & Weather</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,13 +13,20 @@
 
 <body>
   <div class="container">
-    <div class="row">
+    <div class="row left">
+      <img class="header-image" src="images/field-sky.jpg" alt="Header">
       <div class="col-8 maintitle">
-        <h1 id="title">Click A Location</h1>
+        <h1 id="title">Google Map & Open Weather</h1>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row left">
+      <div class="col-8 instructs">
+        <h4>Click on a location for weather or on our icons!</h4>
+      </div>
+    </div>
+
+    <div class="row left">
       <div class="col-8">
         <!-- Show map -->
         <div class="mapbox" id="map">
@@ -28,14 +35,20 @@
       </div>
       <div class="col-4">
         <!-- Show weather -->
-        <div class="weatherbox">
-          <h2><label id="city-country">Weather</label></h2>
-          <h3><label id="temp"></label></h3>          
-          <label id="city"></label>
-          <label id="country"></label>
+        <div class="weatherbox" id="weatherbox">
+          <h2>Weather</h2>
+          <span class="icon-descript">
+            <img id="icon" src="" style="display:inline; height: 75px;">
+            <label id="descript" style="display:inline; white-space:nowrap;"></label>
+          </span>
 
-          <label id="pressure"></label>
+          <h3><label id="temp"></label></h3><br>
+          <h3><label id="city-country"></label></h3><br>
+
+          <label id="wind"></label>
           <label id="humidity"></label>
+          <label id="pressure"></label>
+
         </div>
       </div>
     </div>

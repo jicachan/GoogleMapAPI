@@ -25,7 +25,7 @@ function initMap() {
     addMarker({ coords: event.latLng });
 
     lbLat.innerHTML = "Latitude: " + event.latLng.lat();
-    lbLong.innerHTML = "Longitude: " + event.latLng.lng();
+    lbLong.innerHTML = "- Longitude: " + event.latLng.lng();
 
     initWeather(event.latLng.lat(), event.latLng.lng());
     //initWeather();
@@ -106,13 +106,31 @@ function initWeather (_lat, _lng){
     console.log(data);
 
     // Display weather data
-    document.getElementById('city-country').innerHTML = 'Weather in ' + data.name + ', ' + data.sys.country;
+    document.getElementById('city-country').innerHTML = data.name + ', ' + data.sys.country;
     document.getElementById('temp').innerHTML = data.main.temp + ' °C';
-    document.getElementById('city').innerHTML = 'City: ' + data.name;
-    document.getElementById('country').innerHTML = 'Country code: ' + data.sys.country;
+    document.getElementById('icon').src = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+    document.getElementById('descript').innerHTML = data.weather[0].main;
 
-    document.getElementById('pressure').innerHTML = 'Pressure: ' + data.main.pressure;
-    document.getElementById('humidity').innerHTML = 'Humidity: ' + data.main.humidity;
+    document.getElementById('pressure').innerHTML = 'Pressure: ' + data.main.pressure + ' hpa';
+    document.getElementById('humidity').innerHTML = 'Humidity: ' + data.main.humidity + '%';
+    document.getElementById('wind').innerHTML = 'Wind: ' + data.wind.speed + ' m/s';
+
+    // Display temperated colour
+    var temp = parseFloat(data.main.temp).toFixed(1);
+        
+        if (temp <= -20) {
+            $("#weatherbox").css({'background-color': '#3F51B5', 'color': '#FFF'});
+        } else if(temp <= -10) {
+            $("#weatherbox").css({'background-color': '#2196F3', 'color': '#FFF'});
+        } else if(temp <= 5) {
+            $("#weatherbox").css({'background-color': '#00BCD4', 'color': '#FFF'});
+        } else if (temp <= 25) {
+            $("#weatherbox").css({'background-color': '#4CAF50', 'color': '#FFF'});
+        } else if (temp <= 30) {
+            $("#weatherbox").css({'background-color': '#FFB300', 'color': '#FFF'});
+        } else if (temp >= 30) {
+            $("#weatherbox").css({'background-color': '#d50000', 'color': '#FFF'});
+        }
 
   }).fail(function(data) {
     console.log(data);

@@ -1,17 +1,31 @@
-h1, h2 {
+h1, h2, h4 {
     color: darkblue;
-    padding-bottom: 10px;
 }
 
 .maintitle {
-  margin: 10px;
+  margin-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.header-image {
+  height: 200px;
+  width: 100%;
+}
+
+.instructs {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .mapbox {
   height: 500px;
   width: 100%;
   border: 2px solid darkblue;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 
 .weatherbox {
@@ -19,8 +33,18 @@ h1, h2 {
   color: darkblue;
   padding: 10px 10px 10px 20px;
   border: 2px solid darkblue;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 .weatherbox label {
   display: block;
+}
+
+.icon-descript {
+  display: inline;
+  height: 150px;
+}
+
+.latlon {
+  color: darkblue;
+  padding-left: 20px;
 }
