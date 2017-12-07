@@ -1,7 +1,14 @@
-h1, h2, h4 {
-    color: darkblue;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
+h1, h2, h3, h4 {
+    color: #00004d;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --- Header --- */
 .maintitle {
   margin-left: 20px;
   padding-top: 20px;
@@ -16,27 +23,69 @@ h1, h2, h4 {
   width: 100%;
 }
 
+/* Instructions for user */
 .instructs {
   margin-top: 20px;
   margin-left: 20px;
 }
 
+/* Container for map */
 .mapbox {
   height: 500px;
   width: 100%;
-  border: 2px solid darkblue;
-  border-radius: 20px;
+  /*border: 2px 5px 5px 2px solid #00004d;*/
+  border-top: 1px solid #00004d;
+  border-right: 3px solid #00004d;
+  border-bottom: 7px solid #00004d;
+  border-left: 1px solid #00004d;
+  border-radius: 15px;
 }
 
+/* Container for weather */
 .weatherbox {
   height: 500px;
-  color: darkblue;
+  color: #00004d;
   padding: 10px 10px 10px 20px;
-  border: 2px solid darkblue;
-  border-radius: 20px;
+  min-width: 230px;
+  border-top: 1px solid #00004d;
+  border-right: 3px solid #00004d;
+  border-bottom: 7px solid #00004d;
+  border-left: 1px solid #00004d;
+  border-radius: 15px;
+  background-color: #f1f7ee;
 }
 .weatherbox label {
   display: block;
+  font-size: 16px;
+}
+#termometer {
+  font-size: 30px;
+  padding: 7px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 200px;
+}
+#temp {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+#max-min-temp {
+  font-size: 11px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: text-bottom;
+  margin-left: 5px;
+}
+#max-min-temp > .max {
+  border-bottom: 1px solid;
+  margin-bottom: 15px;
+}
+#max-min-temp > .min {
 }
 
 .icon-descript {
@@ -44,7 +93,8 @@ h1, h2, h4 {
   height: 150px;
 }
 
+/* Coordinates */
 .latlon {
-  color: darkblue;
+  color: #00004d;
   padding-left: 20px;
 }

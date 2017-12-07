@@ -94,7 +94,6 @@ function clearMarkers() {
   }
 }
 
-
 /* --- Display OpenWeatherMap --- */
 function initWeather (_lat, _lng){
   $.ajax({
@@ -115,21 +114,25 @@ function initWeather (_lat, _lng){
     document.getElementById('humidity').innerHTML = 'Humidity: ' + data.main.humidity + '%';
     document.getElementById('wind').innerHTML = 'Wind: ' + data.wind.speed + ' m/s';
 
-    // Display temperated colour
+    // Display temperated colour and min/max-temp
     var temp = parseFloat(data.main.temp).toFixed(1);
-        
+    $("#temp").html(temp +
+        ' &deg;C <span id="max-min-temp"><span class="max">max ' + data.main.temp_max +
+        ' &deg;C</span><br /><span class="min">min ' + data.main.temp_min +
+        ' &deg;C</span></span>');
+
         if (temp <= -20) {
-            $("#weatherbox").css({'background-color': '#3F51B5', 'color': '#FFF'});
+            $("#termometer").css({'background-color': '#79a6d2', 'color': '#FFF'});
         } else if(temp <= -10) {
-            $("#weatherbox").css({'background-color': '#2196F3', 'color': '#FFF'});
+            $("#termometer").css({'background-color': '#c6d9ec', 'color': '#000'});
         } else if(temp <= 5) {
-            $("#weatherbox").css({'background-color': '#00BCD4', 'color': '#FFF'});
+            $("#termometer").css({'background-color': '#e6ccff', 'color': '#000'});
         } else if (temp <= 25) {
-            $("#weatherbox").css({'background-color': '#4CAF50', 'color': '#FFF'});
+            $("#termometer").css({'background-color': '#ffcc99', 'color': '#000'});
         } else if (temp <= 30) {
-            $("#weatherbox").css({'background-color': '#FFB300', 'color': '#FFF'});
+            $("#termometer").css({'background-color': '#ff9933', 'color': '#FFF'});
         } else if (temp >= 30) {
-            $("#weatherbox").css({'background-color': '#d50000', 'color': '#FFF'});
+            $("#termometer").css({'background-color': '#ff3333', 'color': '#FFF'});
         }
 
   }).fail(function(data) {

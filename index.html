@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 
     <div class="row left">
       <div class="col-8 instructs">
-        <h4>Click on a location for weather or on our icons!</h4>
+        <h4>Click a location for the weather!</h4>
       </div>
     </div>
 
@@ -40,15 +41,17 @@
           <span class="icon-descript">
             <img id="icon" src="" style="display:inline; height: 75px;">
             <label id="descript" style="display:inline; white-space:nowrap;"></label>
+          </span><br>
+
+          <span id="termometer">
+            <label id="temp"></label>
           </span>
 
-          <h3><label id="temp"></label></h3><br>
-          <h3><label id="city-country"></label></h3><br>
+          <h3 id="city-country"></h3><br>
 
           <label id="wind"></label>
           <label id="humidity"></label>
           <label id="pressure"></label>
-
         </div>
       </div>
     </div>
