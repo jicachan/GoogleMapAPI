@@ -97,7 +97,8 @@ function clearMarkers() {
 /* --- Display OpenWeatherMap --- */
 function initWeather (_lat, _lng){
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather?lat="+ _lat +"&lon="+ _lng +"&units=metric&lang=sv&appid=df7ba97e01ffc3eeadd7d1ae6cfad212",
+    url: "http://api.openweathermap.org/data/2.5/weather?lat=" + _lat + "&lon=" + _lng +
+    "&units=metric&lang=sv&appid=df7ba97e01ffc3eeadd7d1ae6cfad212",
     type: "GET",
     async: true,
     dataType: "JSON"
@@ -137,7 +138,5 @@ function initWeather (_lat, _lng){
 
   }).fail(function(data) {
     console.log(data);
-    // $("#weather-error").show();
-    // $("#error-text").html(data.message);
   });
 }
